@@ -8,6 +8,8 @@ class StorySection extends HTMLElement {
       // Crear el Shadow DOM
       const shadowRoot = this.attachShadow({ mode: 'open' });
 
+      const imgSrc = this.getAttribute('src') || 'default-profile.jpg'; 
+
       // Crear los estilos directamente desde JavaScript
       const styles = `
       :host {
@@ -75,6 +77,27 @@ class StorySection extends HTMLElement {
       .text {
         max-width: 500px;
       }
+
+         .profile-container {
+            display: flex;
+            width: 200px;
+            margin-right: 50px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+          }
+  
+          .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+          }
+        
     `;
 
       // Crear un elemento <style> e insertar los estilos
@@ -87,6 +110,9 @@ class StorySection extends HTMLElement {
       // Crear el contenido del template con la historia dinámica
       const templateContent = `
       <div class="container">
+      <div class="profile-container">
+          <img src="${imgSrc}" alt="Profile Photo" />
+        </div>
         <div class="text">
           <h2>MIS FUERTES Y MIS DEBILIDADES</h2>
           <p>${historyText}</p>
