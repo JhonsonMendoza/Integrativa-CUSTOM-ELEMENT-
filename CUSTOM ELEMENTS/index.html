@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="Header-Jhonson/custom.js"></script>
     <script src="Body1-Kevin/skill.js"></script>
     <script src="Body1-Kevin/button.js"></script>
     <script src="Body2-Chevez/StorySection.js"></script>
     <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
 
-        .skill-section1, .story-section1 {
-            display: none;
-        }
-        
+      .skill-section1,
+      .story-section1 {
+        display: none;
+      }
+      .button-container {
+        text-align: center; /* Asegura que el botón esté centrado en el contenedor */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <personal-card></personal-card>
 
-  
-
     <div id="story1" class="story-section1">
-        <story-section src="../PrimerProyecto.PNG" history="Soy Jhonson Mendoza, apasionado por el diseño web y el desarrollo de aplicaciones interactivas con React. A veces me cuesta optimizar el rendimiento de las aplicaciones cuando se manejan grandes volúmenes de datos en tiempo real."></story-section>
+      <story-section
+        src="assets/Jhonson1.jpeg"
+        Nombre="Soy Jhonson Mendoza"
+        history="Apasionado por el diseño web y el desarrollo de aplicaciones interactivas con React. A veces me cuesta optimizar el rendimiento de las aplicaciones cuando se manejan grandes volúmenes de datos en tiempo real."
+      ></story-section>
     </div>
     <div id="story2" class="story-section1">
-        <story-section src="assets/Kevin.jpeg" history="Kevin Ordoñez, desarrollador full-stack con experiencia en JavaScript, PHP, y más... A veces me encuentro luchando con la gestión eficiente de bases de datos en aplicaciones de gran escala, lo que provoca cuellos de botella en el rendimiento."></story-section>
+      <story-section
+        src="assets/Kevin.jpeg"
+        Nombre="Soy Kevin Ordoñez"
+        history="Desarrollador full-stack con experiencia en JavaScript, PHP, y más... A veces me encuentro luchando con la gestión eficiente de bases de datos en aplicaciones de gran escala, lo que provoca cuellos de botella en el rendimiento."
+      ></story-section>
     </div>
     <div id="story3" class="story-section1">
-        <story-section history="Karlos Chavez, experto en uso de IA y desarrollo remoto. Aunque me encanta trabajar con algoritmos complejos, a veces tengo dificultades para implementar soluciones de IA escalables en entornos de producción."></story-section>
-    </div>    
+      <story-section
+        Nombre="Soy Karlos Chavez"
+        history="Experto en uso de IA y desarrollo remoto. Aunque me encanta trabajar con algoritmos complejos, a veces tengo dificultades para implementar soluciones de IA escalables en entornos de producción."
+      ></story-section>
+    </div>
 
     <div id="skills1" class="skill-section1">
-        <skill-section skills='["javascript", "html5", "tailwind", "typescript"]'></skill-section>
-        <br>
+      <skill-section
+        skills='["javascript", "html5", "tailwind", "typescript"]'
+      ></skill-section>
+      <br />
+      <div class="button-container">
         <git-button link="https://github.com/tu-usuario"></git-button>
-
+      </div>
     </div>
     <div id="skills2" class="skill-section1">
-        <skill-section skills='["php", "javascript", "html5", "mysql", "css3"]'></skill-section>
-        <br>
-        <git-button link="https://github.com/KevinTitanZ?tab=repositories"></git-button>
-
-
+      <skill-section
+        skills='["php", "javascript", "html5", "mysql", "css3"]'
+      ></skill-section>
+      <br />
+      <div class="button-container">
+        <git-button
+          link="https://github.com/KevinTitanZ?tab=repositories"
+        ></git-button>
+      </div>
     </div>
     <div id="skills3" class="skill-section1">
-        <skill-section skills='["php", "postman", "python", "postgresql"]'></skill-section>
-        <br>
+      <skill-section
+        skills='["php", "postman", "python", "postgresql"]'
+      ></skill-section>
+      <br />
+      <div class="button-container">
         <git-button link="https://github.com/tu-usuario"></git-button>
-
-      
+      </div>
     </div>
-
-    
-</body>
+  </body>
 </html>

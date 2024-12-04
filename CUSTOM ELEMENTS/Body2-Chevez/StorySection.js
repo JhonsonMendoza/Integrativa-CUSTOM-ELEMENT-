@@ -75,28 +75,31 @@ class StorySection extends HTMLElement {
         max-width: 500px;
       }
 
-      .profile-container {
-        display: flex;
-        width: 200px;
-        margin-right: 50px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        justify-content: center;
-        align-items: center;
-        background-color: #f2f2f2;
-      }
+    .profile-container {
+    display: flex;
+    width: 200px;
+    margin-right: 50px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease; /* Añade la transición suave */
+}
 
-      .profile-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-                .profile-container:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-            }
+.profile-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
     `;
 
     const styleElement = document.createElement('style');
@@ -104,13 +107,15 @@ class StorySection extends HTMLElement {
 
     const historyText = this.getAttribute('history') || 'Descripción no disponible';
 
+    const Nombre = this.getAttribute('nombre') || 'No hay nombre!';
+
     const templateContent = `
       <div class="container">
         <div class="profile-container">
           <img src="${imgSrc}" alt="Profile Photo" />
         </div>
         <div class="text">
-          <h2>MIS FUERTES Y MIS DEBILIDADES</h2>
+          <h2>${Nombre}</h2>
           <p>${historyText}</p>
           <a href="#" class="btn">INICIO</a>
         </div>

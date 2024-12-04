@@ -15,7 +15,6 @@ class GitButton extends HTMLElement {
             display: inline-block;
             font-family: 'Roboto', sans-serif;
           }
-            
           .git-button {
             display: inline-flex;
             align-items: center;

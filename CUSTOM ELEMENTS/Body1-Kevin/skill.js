@@ -84,6 +84,7 @@ class SkillSection extends HTMLElement {
         .skill .content .skills .skill-box:hover img {
           filter: grayscale(0);
         }
+          
       </style>
       <section class="skill">
         <div class="container">
