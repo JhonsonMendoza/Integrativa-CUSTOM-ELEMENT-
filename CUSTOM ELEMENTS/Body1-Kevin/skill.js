@@ -88,7 +88,7 @@ class SkillSection extends HTMLElement {
       <section class="skill">
         <div class="container">
           <div class="content">
-            <h1 class="title">Skill</h1>
+            <h1 class="title">Habilidades</h1>
             <div class="skills">
               ${skills
                 .map(
