@@ -63,7 +63,6 @@ class personalCard extends HTMLElement {
 
             </style>
             <div class="div">
-                <h1>INTEGRANTES GRUPO 1</h1>
                 <div class="divU">
                     <button class="button" id="btn1">JHONSON MENDOZA</button>
                     <button class="button" id="btn2">KEVIN ORDOÑEZ</button>
