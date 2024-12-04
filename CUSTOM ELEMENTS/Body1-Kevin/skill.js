@@ -2,57 +2,87 @@ class SkillSection extends HTMLElement {
   constructor() {
     super();
 
-    // Crea un Shadow DOM
     this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    // Obtén el atributo de habilidades (si existe)
     const skills = this.getAttribute('skills')
       ? JSON.parse(this.getAttribute('skills'))
       : [];
 
-    // Renderiza las habilidades dinámicamente
     this.shadowRoot.innerHTML = `
-      <style>
-        .skill {
-          padding: 3rem 0;
-          width: 100%;
+    <style>
+        :host {
+          font-family: 'Roboto', sans-serif;
         }
-        .skill .container .content {
+
+        .skill {
+          padding: 3rem 1rem;
+          width: 100%;
+          background: linear-gradient(135deg, #f0f4f8, #d9eaf5);
+          border-radius: 16px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        .skill .container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .skill .content {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 64px;
-          width: 100%;
+          gap: 40px;
         }
-        .skill .container .content .skills {
+
+        .skill .content .title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #007BFF;
+          text-transform: uppercase;
+          letter-spacing: 1.2px;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill .content .skills {
           display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          align-items: center;
-          justify-content: center;
-          gap: 12px;
-          width: 50%;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          gap: 20px;
+          width: 100%;
+          justify-items: center;
         }
-        .skill .container .content .skills .skill-box {
-          padding: 4px;
-          border: 2px solid #fff;
-          border-radius: 8px;
+
+        .skill .content .skills .skill-box {
+          background-color: white;
+          padding: 16px;
+          border: 2px solid #e0e0e0;
+          border-radius: 12px;
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100px;
-          filter: grayscale(100);
-          transition: all 0.2s linear;
+          height: 120px;
+          width: 120px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .skill .container .content .skills .skill-box:hover {
+
+        .skill .content .skills .skill-box:hover {
+          transform: scale(1.1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill .content .skills .skill-box img {
+          max-width: 60%;
+          max-height: 60%;
+          object-fit: contain;
+          filter: grayscale(100%);
+          transition: filter 0.3s ease;
+        }
+
+        .skill .content .skills .skill-box:hover img {
           filter: grayscale(0);
-          transform: scale(1.02);
-          transition: all 0.2s linear;
-        }
-        .skill .container .content .skills .skill-box img {
-          width: 100%;
-          height: 75%;
         }
       </style>
       <section class="skill">
@@ -77,5 +107,4 @@ class SkillSection extends HTMLElement {
   }
 }
 
-// Define el elemento personalizado
 customElements.define('skill-section', SkillSection);

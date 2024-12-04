@@ -4,34 +4,33 @@ class personalCard extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-            <style>
+          <style>
             :host {
                 display: block;
                 font-family: 'Roboto', sans-serif;
             }
             .div {
-                background-color: #74caf0; 
+                background: linear-gradient(135deg, #007BFF, #74caf0); 
                 width: 100%; 
-                border: 1px solid #e0e0e0; 
+                border: none; 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                border-radius: 12px;
+                border-radius: 16px;
                 padding: 40px 20px;
-                color: #333; 
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-                transition: background-color 0.3s ease;
+                color: white; 
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
-            .div:hover {
-                background-color: #99defc;
-            }
+    
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 margin-bottom: 30px;
-                font-weight: 600; 
+                font-weight: 700; 
                 color: white; 
                 text-align: center;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             }
             .divU {
                 display: flex;
@@ -41,21 +40,25 @@ class personalCard extends HTMLElement {
                 align-items: center;
             }
             .button {
-                background-color: #007BFF;
+                background: linear-gradient(135deg, #0056b3, #007BFF);
                 border: none;
                 color: white;
-                border-radius: 6px;
+                border-radius: 8px;
                 padding: 12px 24px;
                 font-size: 1rem;
-                font-weight: 500; 
+                font-weight: 600; 
                 cursor: pointer;
                 transition: all 0.3s ease; 
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
             .button:hover {
-                background-color: #0056b3; 
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-                transform: translateY(-2px); 
+                background: linear-gradient(135deg, #004080, #0056b3); 
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+                transform: translateY(-3px); 
+            }
+            .button:active {
+                transform: translateY(0); 
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
             }
 
             </style>

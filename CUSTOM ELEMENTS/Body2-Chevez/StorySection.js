@@ -1,17 +1,13 @@
 class StorySection extends HTMLElement {
   constructor() {
-    super(); // Llamada al constructor de HTMLElement
+    super(); 
   }
 
-  // Se ejecuta cuando el elemento se conecta al DOM
   connectedCallback() {
-    // Crear el Shadow DOM
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    // Obtener el valor del atributo 'src' para la imagen, o usar un valor predeterminado
     const imgSrc = this.getAttribute('src') || 'default-profile.jpg'; 
 
-    // Crear los estilos directamente desde JavaScript
     const styles = `
       :host {
         --white: #ffffff;
@@ -97,16 +93,17 @@ class StorySection extends HTMLElement {
         height: 100%;
         object-fit: cover;
       }
+                .profile-container:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            }
     `;
 
-    // Crear un elemento <style> e insertar los estilos
     const styleElement = document.createElement('style');
     styleElement.textContent = styles;
 
-    // Obtener el valor del atributo 'history'
     const historyText = this.getAttribute('history') || 'Descripción no disponible';
 
-    // Crear el contenido del template con la historia dinámica
     const templateContent = `
       <div class="container">
         <div class="profile-container">
@@ -120,15 +117,12 @@ class StorySection extends HTMLElement {
       </div>
     `;
 
-    // Crear un elemento contenedor para el contenido del template
     const templateElement = document.createElement('div');
     templateElement.innerHTML = templateContent;
 
-    // Adjuntar los estilos y el contenido al Shadow DOM
     shadowRoot.appendChild(styleElement);
     shadowRoot.appendChild(templateElement);
   }
 }
 
-// Registrar el componente en el navegador
 window.customElements.define('story-section', StorySection);
