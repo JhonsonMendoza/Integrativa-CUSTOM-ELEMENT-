@@ -6,6 +6,7 @@
     <script src="Header-Jhonson/custom.js"></script>
     <script src="Body1-Kevin/skill.js"></script>
     <script src="Body1-Kevin/button.js"></script>
+    <script src="Body1-Kevin/contactanos.js"></script>
     <script src="Body2-Chevez/StorySection.js"></script>
     <title>Document</title>
     <style>
@@ -24,14 +25,16 @@
   </head>
   <body>
     <personal-card></personal-card>
-
+<!-- Jhonson -->
     <div id="story1" class="story-section1">
       <story-section
         src="assets/Jhonson.jpeg"
         Nombre="Soy Jhonson Mendoza"
         history="Apasionado por el diseño web y el desarrollo de aplicaciones interactivas con React. A veces me cuesta optimizar el rendimiento de las aplicaciones cuando se manejan grandes volúmenes de datos en tiempo real."
       ></story-section>
+      
     </div>
+    <!-- Kevin -->
     <div id="story2" class="story-section1">
       <story-section
         src="assets/Kevin.jpeg"
@@ -39,42 +42,63 @@
         history="Desarrollador full-stack con experiencia en JavaScript, PHP, y más... A veces me encuentro luchando con la gestión eficiente de bases de datos en aplicaciones de gran escala, lo que provoca cuellos de botella en el rendimiento."
       ></story-section>
     </div>
+    <!-- Karlos -->
     <div id="story3" class="story-section1">
       <story-section
       src="assets/Gregory.jpeg"
         Nombre="Soy Karlos Chavez"
         history="Experto en uso de IA y desarrollo remoto. Aunque me encanta trabajar con algoritmos complejos, a veces tengo dificultades para implementar soluciones de IA escalables en entornos de producción."
       ></story-section>
+      
     </div>
-
+    <!-- Jhonson -->
     <div id="skills1" class="skill-section1">
       <skill-section
         skills='["javascript", "html5", "tailwind", "typescript"]'
       ></skill-section>
       <br />
+      <contact-section 
+      facebook-link="https://facebook.com/tuPerfil" 
+      whatsapp-link="https://wa.me/997159253?text=Hola como estas Jhonson?">
+    </contact-section>
+    <br>
       <div class="button-container">
         <git-button link="https://github.com/tu-usuario"></git-button>
       </div>
     </div>
+    <!-- Kevin -->
     <div id="skills2" class="skill-section1">
       <skill-section
         skills='["php", "javascript", "html5", "mysql", "css3"]'
       ></skill-section>
       <br />
+      <contact-section 
+      facebook-link="https://www.facebook.com/profile.php?id=100008987112128" 
+      whatsapp-link="https://wa.me/963532407?text=Hola como estas Kevin?">
+    </contact-section>
+    <br>
       <div class="button-container">
         <git-button
-          link="https://github.com/KevinTitanZ?tab=repositories"
+          link="https://github.com/KevinTitanZ"
         ></git-button>
       </div>
     </div>
+    <!-- Karlos -->
     <div id="skills3" class="skill-section1">
       <skill-section
         skills='["php", "postman", "python", "postgresql"]'
       ></skill-section>
       <br />
-      <div class="button-container">
-        <git-button link="https://github.com/Gregory7M"></git-button>
-      </div>
+      <contact-section 
+  facebook-link="https://facebook.com/tuPerfil" 
+  whatsapp-link="https://wa.me/978751238?text=Hola como estas Karlos?">
+</contact-section>
+<br>
+<div class="button-container">
+  <git-button
+    link="https://github.com/Gregory7M"
+  ></git-button>
+</div>
     </div>
   </body>
 </html>
