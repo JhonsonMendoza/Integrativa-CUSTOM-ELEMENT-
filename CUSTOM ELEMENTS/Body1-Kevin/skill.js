@@ -18,7 +18,7 @@ class SkillSection extends HTMLElement {
 
         .skill {
           padding: 3rem 1rem;
-          width: 100%;
+          width: auto;
           background: linear-gradient(135deg, #f0f4f8, #d9eaf5);
           border-radius: 16px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ class SkillSection extends HTMLElement {
         }
 
         .skill .container {
-          max-width: 1200px;
+          max-width: auto;
           margin: 0 auto;
         }
 
