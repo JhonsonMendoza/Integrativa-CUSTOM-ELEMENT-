@@ -10,6 +10,7 @@ class StorySection extends HTMLElement {
 
     const styles = `
       :host {
+      font-family: 'Roboto', sans-serif;
         --white: #ffffff;
         --black: #74caf0;
         --shadow-color: rgba(0, 0, 0, 0.8);
@@ -117,7 +118,6 @@ class StorySection extends HTMLElement {
         <div class="text">
           <h2>${Nombre}</h2>
           <p>${historyText}</p>
-          <a href="#" class="btn">INICIO</a>
         </div>
       </div>
     `;
