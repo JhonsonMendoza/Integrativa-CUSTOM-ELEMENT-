@@ -11,7 +11,7 @@ class personalCard extends HTMLElement {
             }
             .div {
                 background: linear-gradient(135deg, #007BFF, #74caf0); 
-                width: 100%; 
+                width: auto; 
                 border: none; 
                 display: flex;
                 flex-direction: column;
