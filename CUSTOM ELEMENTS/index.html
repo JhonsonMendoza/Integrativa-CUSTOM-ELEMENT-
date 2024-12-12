@@ -66,8 +66,8 @@
   <template id="footer-template">
     <style>
         .footer {
-            background-color: #a0dff6;
-            color: white;
+            background-color: #aed3e0;
+            color: rgb(25, 25, 25);
             padding: 20px;
             display: flex;
             justify-content: space-around;
@@ -94,7 +94,7 @@
         }
 
         .footer-section a {
-            color: white;
+          color: rgb(25, 25, 25);
             text-decoration: none;
             font-weight: bold;
         }
@@ -102,6 +102,14 @@
         .footer-section a:hover {
             text-decoration: underline;
         }
+
+        img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: translateY(-10px); 
+}
     </style>
     <footer class="footer">
         <div class="footer-section">
