@@ -4,7 +4,6 @@ class FooterComponent extends HTMLElement {
         const template = document.getElementById('footer-template');
         const templateContent = template.content;
 
-        // Adjuntar el contenido del template al Shadow DOM
         this.attachShadow({ mode: "open" });
         this.shadowRoot.appendChild(templateContent.cloneNode(true));
     }

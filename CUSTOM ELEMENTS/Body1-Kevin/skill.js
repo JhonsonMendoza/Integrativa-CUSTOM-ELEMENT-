@@ -10,7 +10,30 @@ class SkillSection extends HTMLElement {
       : [];
 
     this.shadowRoot.innerHTML = `
-    <style>
+      ${this.templateCss()}
+      ${this.templateHtml()}
+    `;
+
+    this.renderSkills(skills);
+  }
+
+  templateHtml() {
+    return `
+      <section class="skill">
+        <div class="container">
+          <div class="content">
+            <h1 class="title">Habilidades</h1>
+            <div class="skills" id="skillsContainer">
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  templateCss() {
+    return `
+      <style>
         :host {
           font-family: 'Roboto', sans-serif;
         }
@@ -83,20 +106,8 @@ class SkillSection extends HTMLElement {
         .skill .content .skills .skill-box:hover img {
           filter: grayscale(0);
         }
-          
       </style>
-      <section class="skill">
-        <div class="container">
-          <div class="content">
-            <h1 class="title">Habilidades</h1>
-            <div class="skills" id="skillsContainer">
-            </div>
-          </div>
-        </div>
-      </section>
     `;
-
-    this.renderSkills(skills);
   }
 
   renderSkills(skills) {
