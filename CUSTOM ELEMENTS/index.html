@@ -11,6 +11,7 @@
     <script src="Body2-Chevez/StorySection.js"></script>
     <script src="Body1-Kevin/footerTemplate.js"></script>
     <script src="Header-Jhonson/graficas.js"></script>
+    <script src="Body2-Chevez/buton.js"></script>
 
     <script type="module">
       import { ProjectCard } from './Header-Jhonson/project-card.js';
@@ -129,7 +130,7 @@ img:hover {
     <!-- Jhonson -->
     <div id="skills1" class="skill-section1">
       <skill-section
-        skills='["javascript", "html5", "tailwind", "typescript", "css3", "React"]'
+        skills='["javascript", "html5", "tailwind", "typescript", "css3" ]'
       ></skill-section>
       <br />
       <contact-section 
@@ -202,13 +203,14 @@ email="jbmendoza@espe.edu.ec"
           image="assets/IdrixImg.jpg">
       </portfolio-project-card>
   </div>
-<br>
-<footer-component
-location="Santo Domingo - Urbanización el Cirulo"
-hours="Lunes – Viernes: 8:30 AM – 6:00 PM
-Sábado: 9:00 AM – 6:00 PM"
-email="klordonez1@espe.edu.ec"
-></footer-component>
+  <br>
+    <footer-component
+      location="Santo Domingo - Urbanización el Cirulo"
+      hours="Lunes – Viernes: 8:30 AM – 6:00 PM
+      Sábado: 9:00 AM – 6:00 PM"
+      email="klordonez1@espe.edu.ec"
+    >
+    </footer-component>
     </div>
 
 
@@ -219,40 +221,39 @@ email="klordonez1@espe.edu.ec"
       ></skill-section>
       <br />
       <contact-section 
-  facebook-link="https://www.facebook.com/profile.php?id=100009547223016" 
-  whatsapp-link="https://wa.me/978751238?text=He revisado tu perfil y estoy realmente interesado en tus habilidades y experiencia. Me gustaría invitarte a formar parte de mi proyecto."
-  github-link="https://github.com/Gregory7M">
-</contact-section>
-<br>
+        facebook-link="https://www.facebook.com/profile.php?id=100009547223016" 
+        whatsapp-link="https://wa.me/978751238?text=He revisado tu perfil y estoy realmente interesado en tus habilidades y experiencia. Me gustaría invitarte a formar parte de mi proyecto."
+        github-link="https://github.com/Gregory7M">
+      </contact-section>
+      <br>
 
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+        <skill-chart
+            skills='[
+                {"name": "Front-End Development:", "value": 40},
+                {"name": "Back-End Development:", "value": 40},
+                {"name": "Bases de Datos:", "value": 30},
+                {"name": "DevOps:", "value": 40},
+                {"name": "Seguridad:", "value": 90}
+            ]'
+        ></skill-chart>
 
-<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
-  <skill-chart
-      skills='[
-          {"name": "Front-End Development:", "value": 90},
-          {"name": "Back-End Development:", "value": 20},
-          {"name": "Bases de Datos:", "value": 30},
-          {"name": "DevOps:", "value": 10},
-          {"name": "Seguridad:", "value": 10}
-      ]'
-  ></skill-chart>
-
-  <portfolio-project-card 
-      title="Idrix" 
-      description="Actualmente, trabajo en iDrix Technology S.A., donde me especializo en el desarrollo Front-End. Me he desempeñado como responsable principal del Front-End en diversos proyectos, aportando soluciones innovadoras y asegurando una experiencia de usuario de alta calidad."
-      technologies="JavaScript, Tailwind, React"
-      link="https://www.idrix.com.ec/"
-      image="assets/IdrixImg.jpg">
-  </portfolio-project-card>
-</div>
-
-<br>
-<footer-component
-location="Santo Domingo - "
-hours="Lunes – Viernes: 8:30 AM – 6:00 PM
-Sábado: 9:00 AM – 6:00 PM"
-email="chevez@espe.edu.ec"
-></footer-component>
+        <portfolio-project-card 
+            title="Idrix" 
+            description="Actualmente, trabajo en iDrix Technology S.A."
+            technologies="JavaScript, Tailwind, React"
+            link="https://www.idrix.com.ec/"
+            image="assets/IdrixImg.jpg">
+        </portfolio-project-card>
+      </div>
+      <custom-button label="Ir a la página 2"></custom-button>
+      <br>
+      <footer-component
+        location="Santo Domingo - "
+        hours="Lunes – Viernes: 8:30 AM – 6:00 PM
+        Sábado: 9:00 AM – 6:00 PM"
+        email="chevez@espe.edu.ec"
+      ></footer-component>
     </div>
 
     <script src="Body1-Kevin/footerTemplate.js"></script>

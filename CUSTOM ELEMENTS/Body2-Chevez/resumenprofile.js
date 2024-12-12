@@ -7,7 +7,7 @@ class ResumeProfile extends HTMLElement {
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
         const nombre = this.getAttribute('nombre') || 'Luis García Benítez';
-        const foto = this.getAttribute('foto') || '../../assets/Gregory.jpeg';
+        const foto = this.getAttribute('foto') || 'no hay nada';
         const perfil = this.getAttribute('perfil') || 'Administrador de sistemas y experto en la configuración de infraestructuras de hardware y software. Dinámico y con experiencia en entornos empresariales exigentes.';
         const experiencia1 = this.getAttribute('experiencia1') || 'Administrador de sistemas - ABC Corp (2017-2020)';
         const experiencia2 = this.getAttribute('experiencia2') || 'Analista Técnico - XYZ Solutions (2015-2017)';
