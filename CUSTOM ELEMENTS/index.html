@@ -10,6 +10,10 @@
     <script src="Body2-Chevez/StorySection.js"></script>
     <script src="Body1-Kevin/footerTemplate.js"></script>
     <script src="Header-Jhonson/graficas.js"></script>
+
+    <script type="module">
+      import { ProjectCard } from './Header-Jhonson/project-card.js';
+  </script>
     <title>Lab 2</title>
     <style>
       body {
@@ -23,6 +27,7 @@
       .button-container {
         text-align: center;
       }
+ 
     </style>
   </head>
   <body>
@@ -53,6 +58,9 @@
       ></story-section>
       
     </div>
+
+    <!-- AQUI COMIENZA LO BUENO XD -->
+
     <!-- Jhonson -->
     <div id="skills1" class="skill-section1">
       <skill-section
@@ -66,25 +74,37 @@
     </contact-section>
     <br>
 
-    <skill-chart
-    skills='[
-        {"name": "Eficiencia", "value": 40},
-        {"name": "Concentración", "value": 20},
-        {"name": "Disponibilidad", "value": 30},
-        {"name": "Dedicación", "value": 10}
-    ]'
-></skill-chart>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+      <skill-chart
+          skills='[
+              {"name": "Front-End Development:", "value": 90},
+              {"name": "Back-End Development:", "value": 20},
+              {"name": "Bases de Datos:", "value": 30},
+              {"name": "DevOps:", "value": 10},
+              {"name": "Seguridad:", "value": 10}
+          ]'
+      ></skill-chart>
+  
+      <portfolio-project-card 
+          description="Actualmente, trabajo en iDrix Technology S.A., donde me especializo en el desarrollo Front-End. Me he desempeñado como responsable principal del Front-End en diversos proyectos, aportando soluciones innovadoras y asegurando una experiencia de usuario de alta calidad."
+          technologies="JavaScript, Tailwind, React"
+          link="https://www.idrix.com.ec/"
+          image="assets/IdrixImg.jpg">
+      </portfolio-project-card>
+  </div>
+  
 
 <br>
     <footer-component
-    name="Tu Nombre"
+    name="Jhonson Mendoza"
     description="Desarrollador web apasionado por crear soluciones innovadoras y experiencias de usuario excepcionales."
     email="tu@email.com"
     phone="+1234567890"
     github="https://github.com/tuusuario"
     linkedin="https://linkedin.com/in/tuusuario"
     ></footer-component>
-    
+   
+  
     </div>
     <!-- Kevin -->
     <div id="skills2" class="skill-section1">
@@ -99,15 +119,25 @@
     </contact-section>
     <br>
 
-    <skill-chart
-    skills='[
-        {"name": "Eficiencia", "value": 40},
-        {"name": "Concentración", "value": 20},
-        {"name": "Disponibilidad", "value": 30},
-        {"name": "Dedicación", "value": 10}
-    ]'
-></skill-chart>
-
+   
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+      <skill-chart
+          skills='[
+              {"name": "Front-End Development:", "value": 30},
+              {"name": "Back-End Development:", "value": 80},
+              {"name": "Bases de Datos:", "value": 40},
+              {"name": "DevOps:", "value": 25},
+              {"name": "Seguridad:", "value": 0}
+          ]'
+      ></skill-chart>
+  
+      <portfolio-project-card 
+          description="Actualmente, trabajo en iDrix Technology S.A., donde me especializo en el desarrollo Back-End. Actualmente, estoy participando en uno de los proyectos principales de la empresa, colaborando con XILED en el desarrollo de un sistema integral diseñado específicamente para sus necesidades."
+          technologies="PHP, Html, JavaScript"
+          link="https://www.idrix.com.ec/"
+          image="assets/IdrixImg.jpg">
+      </portfolio-project-card>
+  </div>
 <br>
     <footer-component
     name="Kevin Ordoñez"
@@ -118,6 +148,8 @@
     linkedin="https://linkedin.com/in/tuusuario"
     ></footer-component>
     </div>
+
+
     <!-- Karlos -->
     <div id="skills3" class="skill-section1">
       <skill-section
@@ -131,14 +163,26 @@
 </contact-section>
 <br>
 
-<skill-chart
-skills='[
-    {"name": "Eficiencia", "value": 40},
-    {"name": "Concentración", "value": 20},
-    {"name": "Disponibilidad", "value": 30},
-    {"name": "Dedicación", "value": 10}
-]'
-></skill-chart>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+  <skill-chart
+      skills='[
+          {"name": "Front-End Development:", "value": 90},
+          {"name": "Back-End Development:", "value": 20},
+          {"name": "Bases de Datos:", "value": 30},
+          {"name": "DevOps:", "value": 10},
+          {"name": "Seguridad:", "value": 10}
+      ]'
+  ></skill-chart>
+
+  <portfolio-project-card 
+      title="Idrix" 
+      description="Actualmente, trabajo en iDrix Technology S.A., donde me especializo en el desarrollo Front-End. Me he desempeñado como responsable principal del Front-End en diversos proyectos, aportando soluciones innovadoras y asegurando una experiencia de usuario de alta calidad."
+      technologies="JavaScript, Tailwind, React"
+      link="https://www.idrix.com.ec/"
+      image="assets/IdrixImg.jpg">
+  </portfolio-project-card>
+</div>
 
 <br>
 <footer-component

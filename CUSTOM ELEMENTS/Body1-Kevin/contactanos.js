@@ -19,7 +19,7 @@ class ContactSection extends HTMLElement {
         .floating-contact {
           margin-right: 10px;
           position: fixed;
-          top: 85%;
+          top: 80%;
           right: 0;
           transform: translateY(-50%);
           display: flex;

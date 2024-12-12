@@ -22,38 +22,45 @@ class SkillChart extends HTMLElement {
         `).join('');
 
         this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                    font-family: Arial, sans-serif;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                .skill {
-                    margin-bottom: 20px;
-                }
-                .skill-name {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-                .skill-bar-container {
-                    background-color: #e0e0e0;
-                    height: 25px;
-                    border-radius: 12.5px;
-                    overflow: hidden;
-                }
-                .skill-bar {
-                    height: 100%;
-                    background-color: #4CAF50;
-                    text-align: right;
-                    color: white;
-                    transition: width 1s ease-in-out;
-                }
-                .skill-value {
-                    padding-right: 10px;
-                    line-height: 25px;
-                }
-            </style>
+           <style>
+            :host {
+                display: block;
+                flex: 1; /* Permite que se ajuste en un diseño flex */
+                max-width: 400px; /* Limita el ancho máximo */
+                margin: 15px; /* Espacio alrededor del componente */
+                box-sizing: border-box;
+            }
+            .chart {
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+                
+            }
+            .skill {
+                margin-bottom: 10px;
+            }
+            .skill-name {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .skill-bar-container {
+                background-color: #e0e0e0;
+                height: 25px;
+                border-radius: 12.5px;
+                overflow: hidden;
+            }
+            .skill-bar {
+                height: 100%;
+                background-color: #4CAF50;
+                text-align: right;
+                color: white;
+                transition: width 1s ease-in-out;
+            }
+            .skill-value {
+                padding-right: 10px;
+                line-height: 25px;
+            }
+        </style>
             <div class="chart">
                 ${chartHTML}
             </div>
