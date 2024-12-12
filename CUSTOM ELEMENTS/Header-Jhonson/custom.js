@@ -10,7 +10,7 @@ class personalCard extends HTMLElement {
                 font-family: 'Roboto', sans-serif;
             }
             .div {
-                background: linear-gradient(135deg, #007BFF, #74caf0); 
+                background: linear-gradient(135deg, #aed3e0, #74caf0); 
                 width: auto; 
                 border: none; 
                 display: flex;
@@ -40,7 +40,7 @@ class personalCard extends HTMLElement {
                 align-items: center;
             }
             .button {
-                background: linear-gradient(135deg, #0056b3, #007BFF);
+                background: linear-gradient(135deg,rgb(19, 107, 201), #007BFF);
                 border: none;
                 color: white;
                 border-radius: 8px;
