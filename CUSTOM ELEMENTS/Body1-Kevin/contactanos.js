@@ -8,6 +8,7 @@ class ContactSection extends HTMLElement {
     connectedCallback() {
       const facebookLink = this.getAttribute('facebook-link') || '#';
       const whatsappLink = this.getAttribute('whatsapp-link') || '#';
+      const githubLink = this.getAttribute('github-link') || '#';
   
       this.shadowRoot.innerHTML = `
       <style>
@@ -18,7 +19,7 @@ class ContactSection extends HTMLElement {
         .floating-contact {
           margin-right: 10px;
           position: fixed;
-          top: 50%;
+          top: 85%;
           right: 0;
           transform: translateY(-50%);
           display: flex;
@@ -52,11 +53,14 @@ class ContactSection extends HTMLElement {
         }
       </style>
       <div class="floating-contact">
-        <a href="${facebookLink}" target="_blank" rel="noopener noreferrer">
+        <a href="${facebookLink}" target="_blank" >
           <img src="assets/icon/facebook.svg" alt="Facebook" />
         </a>
-        <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer">
+        <a href="${whatsappLink}" target="_blank" >
           <img src="assets/icon/whatsapp.svg" alt="WhatsApp" />
+        </a>
+             <a href="${githubLink}" target="_blank" >
+          <img src="assets/icon/githu.svg" alt="GitHub" />
         </a>
       </div>
       `;

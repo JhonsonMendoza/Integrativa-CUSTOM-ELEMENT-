@@ -1,7 +1,6 @@
 class SkillSection extends HTMLElement {
   constructor() {
     super();
-
     this.attachShadow({ mode: 'open' });
   }
 
@@ -90,21 +89,32 @@ class SkillSection extends HTMLElement {
         <div class="container">
           <div class="content">
             <h1 class="title">Habilidades</h1>
-            <div class="skills">
-              ${skills
-                .map(
-                  (skill) => `
-                <div class="skill-box">
-                  <img src="assets/icon/${skill}.svg" alt="${skill}" />
-                </div>
-              `
-                )
-                .join('')}
+            <div class="skills" id="skillsContainer">
             </div>
           </div>
         </div>
       </section>
     `;
+
+    this.renderSkills(skills);
+  }
+
+  renderSkills(skills) {
+    const skillsContainer = this.shadowRoot.getElementById('skillsContainer');
+    
+    skills.forEach(skill => {
+      const img = new Image();
+      img.src = `assets/icon/${skill}.svg`;
+      img.onload = () => {
+        const skillBox = document.createElement('div');
+        skillBox.className = 'skill-box';
+        skillBox.innerHTML = `<img src="assets/icon/${skill}.svg" alt="${skill}" />`;
+        skillsContainer.appendChild(skillBox);
+      };
+      img.onerror = () => {
+        console.warn(`No se encontró la imagen para la habilidad: ${skill}`);
+      };
+    });
   }
 }
 
